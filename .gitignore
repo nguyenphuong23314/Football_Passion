@@ -1,0 +1,9 @@
+
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+.vs/Football_Passion/DesignTimeBuild/.dtbcache
+.vs/Football_Passion/v16/.suo
+*.dep *.aps *.vbw *.suo *.obj *.ncb *.plg *.bsc *.ilk 
+*.exp *.sbr *.opt *.pdb *.idb *.pch *.res *.user
