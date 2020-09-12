@@ -7,3 +7,9 @@
 .vs/Football_Passion/v16/.suo
 *.dep *.aps *.vbw *.suo *.obj *.ncb *.plg *.bsc *.ilk 
 *.exp *.sbr *.opt *.pdb *.idb *.pch *.res *.user
+.vs/Football_Passion/v15/.suo
+bin/
+obj/
+*.cache
+Application/obj
+*.cache
