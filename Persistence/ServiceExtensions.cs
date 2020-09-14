@@ -1,8 +1,10 @@
 ﻿using Application.Interfaces;
+using Application.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Contexts;
+using Persistence.Repositories;
 
 namespace Persistence
 {
@@ -15,6 +17,9 @@ namespace Persistence
 					configuration.GetConnectionString("DefaultConnection"),
 					b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 			services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+
+			services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
+			services.AddTransient<ILeagueRepositoryAsync, LeagueRepositoryAsync>();
 		}
 	}
 }
